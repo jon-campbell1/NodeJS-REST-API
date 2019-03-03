@@ -1,0 +1,25 @@
+<div style='float:left'>
+{{#if title}}
+<h2>{{title}}</h2>
+{{/if}}
+
+{{#if data}}
+<div>Count: {{data.count}}</div>
+<br>
+{{#each data.products}}
+<div>{{name}} - ${{price}}</div>
+Id: {{{id}}}
+<br><br>
+{{/each}}
+{{/if}}
+</div>
+
+
+<div style=float:left;margin-left:100px;>
+<h2>Add a Product:</h2>
+<form method='POST' action='/products'>
+<input type='text' name='name' placeholder='Product name'><br/>
+<input type='text' name='price' placeholder='Product Price'><br/>
+<button type='submit'>Submit</button>
+</form>
+</div>
